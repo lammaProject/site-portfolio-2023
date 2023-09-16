@@ -19,6 +19,6 @@ app.get("/*", function (req, res) {
   res.sendFile(indexPath);
 });
 
-app.listen(3000, "0.0.0.0", () => {
+app.listen(80, () => {
   console.log("start");
 });
