@@ -19,6 +19,6 @@ app.get("/*", function (req, res) {
   res.sendFile(indexPath);
 });
 
-app.listen(80, () => {
+app.listen(3000, "127.0.0.1", () => {
   console.log("start");
 });
