@@ -1,7 +1,5 @@
-// @ts-ignore
-import express from "express";
-// @ts-ignore
-import path from "path";
+const express = require("express");
+const path = require("path");
 
 const app = express();
 
