@@ -1,0 +1,55 @@
+{
+  "name": "porfel",
+  "version": "1.0.0",
+  "description": "portfel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --mode development ",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lammaProject/porfel.git"
+  },
+  "author": "anton tokarev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lammaProject/porfel/issues"
+  },
+  "homepage": "https://github.com/lammaProject/porfel#readme",
+  "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@types/react-slick": "^0.23.10",
+    "autoprefixer": "^10.4.15",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "path": "^0.12.7",
+    "postcss-loader": "^7.3.3",
+    "redux-devtools-extension": "^2.13.9",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "css-loader": "^6.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router": "6.2.1",
+    "react-router-dom": "^6.16.0",
+    "react-slick": "^0.29.0",
+    "redux": "^4.2.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

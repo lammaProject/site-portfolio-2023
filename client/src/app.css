@@ -1,0 +1,132 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  overflow-x: hidden;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-container {
+  display: inline-block;
+}
+
+.backCustomMain {
+  background: #D7D7D7;
+  background-image:linear-gradient(100deg, #D7D7D7 50%, #000000 20%);
+  background-repeat: no-repeat;
+}
+
+.backCustomBerriesGradient {
+  background-image: url("data:image/svg+xml,%3Csvg width='570' height='469' viewBox='0 0 570 469' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M438.527 67.0172C386.619 116.063 335.671 76.6529 312.313 49.6346C288.955 22.6163 302.031 18.2213 353.939 -30.8248C405.847 -79.871 466.863 -97.7281 490.221 -70.7098C513.579 -43.6914 490.435 17.971 438.527 67.0172Z' fill='black'/%3E%3Cpath d='M438.527 67.0172C386.619 116.063 335.671 76.6529 312.313 49.6346C288.955 22.6163 302.031 18.2213 353.939 -30.8248C405.847 -79.871 466.863 -97.7281 490.221 -70.7098C513.579 -43.6914 490.435 17.971 438.527 67.0172Z' fill='black'/%3E%3Cpath d='M438.527 67.0172C386.619 116.063 335.671 76.6529 312.313 49.6346C288.955 22.6163 302.031 18.2213 353.939 -30.8248C405.847 -79.871 466.863 -97.7281 490.221 -70.7098C513.579 -43.6914 490.435 17.971 438.527 67.0172Z' fill='black'/%3E%3Cpath d='M351.533 30.9476C353.605 102.17 370.93 45.1207 335.233 47.8787C299.537 50.6366 300.33 36.888 225.315 21.6349C223.242 -49.5871 247.449 -90.2595 283.146 -93.0174C318.842 -95.7754 349.46 -40.2743 351.533 30.9476Z' fill='black'/%3E%3Cpath d='M351.533 30.9476C353.605 102.17 370.93 45.1207 335.233 47.8787C299.537 50.6366 300.33 36.888 225.315 21.6349C223.242 -49.5871 247.449 -90.2595 283.146 -93.0174C318.842 -95.7754 349.46 -40.2743 351.533 30.9476Z' fill='black'/%3E%3Cpath d='M351.533 30.9476C353.605 102.17 370.93 45.1207 335.233 47.8787C299.537 50.6366 300.33 36.888 225.315 21.6349C223.242 -49.5871 247.449 -90.2595 283.146 -93.0174C318.842 -95.7754 349.46 -40.2743 351.533 30.9476Z' fill='black'/%3E%3Cpath d='M153.666 -13.7559L427.104 107.34C462.958 123.219 479.151 165.156 463.273 201.009L350.23 456.262L76.7922 335.166C40.9387 319.287 24.7455 277.35 40.6238 241.497L153.666 -13.7559Z' stroke='black' stroke-width='18'/%3E%3Cpath d='M238.025 106.811L158.885 285.511L135.587 275.194L214.727 96.4936L238.025 106.811ZM417.923 186.482L408.286 208.243L346.585 180.918L277.083 337.857L253.785 327.539L323.288 170.601L261.588 143.276L271.225 121.515L417.923 186.482Z' fill='black'/%3E%3C/svg%3E%0A"),  linear-gradient(90deg, #1D1D1D 31.74%, #1D1D1D 90.49%, #1D1D1D 90.49%);
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
+.myPhoto {
+  position: absolute;
+  top: -34%;
+  right: 20%;
+  width: 330px;
+  height: 800px;
+  background-image: url("/src/assets/images/miugly.png");
+  background-repeat: no-repeat;
+}
+
+.backAboutMe {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0.00) 0%, rgba(1, 1, 1, 0.16) 100%), #FFF;
+}
+
+.backDevTools {
+  background-image: url("data:image/svg+xml, %3Csvg className='max-w-%5B80px%5D' viewBox='0 0 30 30' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='%23D9D9D9' stroke='%23D9D9D9' %3E%3Cg id='SVGRepo_bgCarrier' strokeWidth='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' strokeLinecap='round' strokeLinejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E %7B' '%7D %3Ctitle%3Etools%3C/title%3E%3Cdesc%3ECreated with Sketch Beta.%3C/desc%3E%3Cdefs%3E%3C/defs%3E%7B' '%7D %3Cg id='Page-1' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'%3E %7B' '%7D %3Cg id='Icon-Set-Filled' transform='translate(-571.000000, -310.000000)' fill='%23D9D9D9'%3E %7B' '%7D %3Cpath d='M600.159,315.37 C599.653,315.938 598.813,316.661 597.609,317.762 C596.334,319.034 594.529,319.034 593.254,317.762 C591.978,316.488 591.978,314.688 593.254,313.415 C594.429,312.242 595.692,310.853 595.672,310.847 C592.257,309.274 588.082,309.882 585.268,312.69 C582.703,315.249 581.972,318.935 583.051,322.146 L572.2,332.976 C570.596,334.576 570.596,337.171 572.2,338.771 C573.804,340.371 576.404,340.371 578.008,338.771 L588.858,327.942 C592.078,329.021 595.771,328.289 598.336,325.73 C601.146,322.925 601.73,318.775 600.159,315.37' id='tools' %3E %7B' '%7D %3C/path%3E%7B' '%7D %3C/g%3E%7B' '%7D %3C/g%3E%7B' '%7D %3C/g%3E%3C/svg%3E");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: left 0 top 0;
+}
+
+.backPortFolio {
+  background-image: url("/src/assets/images/backgrounPortfolio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bank {
+  background-image: url("/src/assets/images/bankImg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.pomodoro {
+  background-image: url("/src/assets/images/pomodoro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.etc {
+  background-image: url("/src/assets/images/gitImg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.tokfood {
+  background-image: url("/src/assets/images/tokfood.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.Wave {
+  background-image: url("/src/assets/images/w-wave.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.Skb {
+  background-image: url("/src/assets/images/skb.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.Blanchard {
+  background-image: url("/src/assets/images/Blanchard.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.slick-slider {
+  background: #e5e7eb;
+  margin: 0;
+  padding: 0;
+}
+.slick-next {
+  right: 0;
+}
+
+.slide {
+  pointer-events: none;
+  box-shadow: inset 0px 0px 277px 3px #FFFFFF;
+}
+.viewButton {
+  pointer-events: auto;
+}
+
+.slide:hover {
+  box-shadow: unset;
+}
+
+
+@media (max-width: 1125px) {
+  .backCustomMain {
+    background-image: linear-gradient(100deg, #D7D7D7 60%, #000000 20%);
+  }
+}
+
