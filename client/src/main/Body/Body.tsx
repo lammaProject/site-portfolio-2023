@@ -31,7 +31,18 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from "../../assets/images/img1png.png";
 import MainInfoAdaptive from "../Adaptive/MainInfoAdaptive";
 import useSize from "../hooks/useSize";
+import { getStorage } from "../hooks/useLocal";
+import baseLang from "../../assets/language.json";
+interface BaseLang {
+  [key: string]: any;
+}
+
+const baseLangTyped: BaseLang = baseLang;
 const Body = () => {
+  const lang = getStorage().lang;
+  const text = (half: string, num: number) => {
+    return baseLangTyped[half][lang][num];
+  };
   const { containerWidth, containerWidthIn } = useSize();
 
   const caruselItems = [
@@ -79,6 +90,16 @@ const Body = () => {
     { id: 6, title: "Item 2", name: "SKB", desc: "text", action: true, img: "Skb", color: "black", location: "skb" },
     {
       id: 7,
+      title: "Item 7",
+      name: "WateBot",
+      desc: "text",
+      action: true,
+      img: "waterBot",
+      color: "white",
+      location: "https://t.me/WaterAllDay_bot",
+    },
+    {
+      id: 8,
       title: "Item 5",
       name: "ETC project",
       desc: "text",
@@ -89,6 +110,11 @@ const Body = () => {
     },
   ];
 
+  const checkAdaptive = useMemo(() => {
+    if (containerWidth > 500 && containerWidthIn < 500) return true;
+    return containerWidth < 500 && containerWidthIn > 500;
+  }, [containerWidth, containerWidthIn]);
+
   const settings = {
     autoplay: true,
     autoplaySpeed: 2000,
@@ -96,17 +122,12 @@ const Body = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
+    centerPadding: checkAdaptive ? "0px" : "60px",
+    slidesToShow: checkAdaptive ? 1 : 3,
     speed: 500,
     initialSlide: 2,
     arrows: false,
   };
-
-  const checkAdaptive = useMemo(() => {
-    if (containerWidth > 500 && containerWidthIn < 500) return true;
-    return containerWidth < 500 && containerWidthIn > 500;
-  }, [containerWidth, containerWidthIn]);
 
   return (
     <div className="w-full relative pt-[50px]">
@@ -119,10 +140,10 @@ const Body = () => {
             <LogoBurgerFun />
           </div>
           <div className="flex flex-col m-w-[50%] mb-[100px]">
-            <h2 className="text-black text-[40px] font-bold font-['Raleway'] xl:mb-[20px]">Привет, меня зовут</h2>
-            <h1 className="text-black text-7xl font-bold font-['Raleway'] mb-[10px]">Токарев Антон</h1>
+            <h2 className="text-black text-[40px] font-bold font-['Raleway'] xl:mb-[20px]">{text("mainInfo", 0)}</h2>
+            <h1 className="text-black text-7xl font-bold font-['Raleway'] mb-[10px]">{text("mainInfo", 1)}</h1>
             <h3 className="text-neutral-400 text-2xl font-extrabold font-['Raleway'] mb-[120px]">
-              Front-end Developer / хороший человек
+              {text("mainInfo", 2)}
             </h3>
             <LinksBody />
           </div>
@@ -131,27 +152,24 @@ const Body = () => {
       {/*additionally*/}
       <div className="backCustomBerriesGradient w-full min-h-[200px] overflow-hidden relative">
         <div className="flex flex-col mt-[50px] ml-[100px] mb-[50px] mr-[300px]">
-          <h2 className="text-white text-3xl font-bold font-['Montserrat'] tracking-widest mb-[20px]">IT BERRIES</h2>
+          <h2 className="text-white text-3xl font-bold font-['Montserrat'] tracking-widest mb-[20px]">
+            {text("additionally", 0)}
+          </h2>
           <p className="text-justify text-white text-base font-normal font-['Open Sans'] leading-tight mb-[30px]">
-            Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem
-            sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus,
-            lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit
-            amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra.
-            Ut ante justo, consequat vitae elementum tempor, accumsan nec eros.
+            {text("additionally", 1)}
           </p>
           <button className="max-w-[120px] text-center text-white text-base font-['Montserrat'] border-r-2 border-l-2">
-            Read more
+            {text("additionally", 2)}
           </button>
         </div>
       </div>
       {/*about me*/}
       <div className="backAboutMe min-h-[2500px] flex flex-col items-center w-full relative pt-[140px]">
         <div className="mb-[80px] border-[8px] border-[#000]  py-[5px] px-[15px] text-center text-black text-3xl font-bold font-['Montserrat'] leading-10 tracking-widest">
-          ABOUT ME
+          {text("aboutMe", 0)}
         </div>
         <p className="max-w-[700px] text-center text-zinc-950 text-base font-normal font-['Open Sans'] leading-tight mb-[85px]">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem
-          sed viverra. In vel urna quis libero viverra facilisis ut ac est.
+          {text("aboutMe", 1)}
         </p>
         <div className="mb-[100px]">
           <LogoLine />
@@ -159,23 +177,20 @@ const Body = () => {
         <div className="flex mb-[100px]">
           <div className="flex flex-col max-w-[460px] relative p-[30px] items-start backDevTools">
             <h3 className="text-center text-black text-xl font-bold font-['Montserrat'] tracking-widest mb-[10px]">
-              DEVELOPMENT
+              {text("aboutMe", 2)}
             </h3>
-            <p className="text-justify text-black text-sm font-light font-['Open Sans']">
-              I can design the site based on your needs and suggestions. I can also design the site from scratch and
-              consult you during the job.
-            </p>
+            <p className="text-justify text-black text-sm font-light font-['Open Sans']">{text("aboutMe", 3)}</p>
           </div>
         </div>
         <div className="skills mb-[100px]">
           <LogoLine />
         </div>
         <div className="mb-[80px] border-[8px] border-[#000]  py-[5px] px-[15px] text-center text-black text-3xl font-bold font-['Montserrat'] leading-10 tracking-widest">
-          SKILLS
+          {text("aboutMe", 4)}
         </div>
         <div>
           <h2 className="text-black text-3xl font-bold font-['Montserrat'] tracking-widest mb-[75px] xl:p-0 md:ml-[20px]">
-            USING NOW:{" "}
+            {text("aboutMe", 5)}:
           </h2>
           <div className="flex flex-wrap justify-between mb-[100px]">
             <div className="w-[20%] items-center flex flex-col mb-[65px]">
@@ -247,7 +262,7 @@ const Body = () => {
           </div>
           <div>
             <h2 className="text-black text-3xl font-bold font-['Montserrat'] tracking-widest mb-[75px] xl:p-0 md:ml-[20px]">
-              LEARNING:
+              {text("aboutMe", 6)}:
             </h2>
             <div className="flex flex-wrap justify-between mb-[100px]">
               <div className="w-[25%] items-center flex flex-col">
@@ -283,7 +298,7 @@ const Body = () => {
             </div>
             <div>
               <h2 className="text-black text-3xl font-bold font-['Montserrat'] tracking-widest mb-[75px] xl:p-0 md:ml-[20px]">
-                IDE:
+                {text("aboutMe", 7)}:
               </h2>
               <div className="flex flex-wrap justify-between mb-[100px]">
                 <div className="w-[50%] items-center flex flex-col mb-[65px]">
@@ -306,7 +321,7 @@ const Body = () => {
             </div>
             <div>
               <h2 className="text-black text-3xl font-bold font-['Montserrat'] tracking-widest mb-[75px] xl:p-0 md:ml-[20px]">
-                OTHER SKILLS:
+                {text("aboutMe", 8)}:
               </h2>
               <div className="flex flex-wrap justify-between mb-[100px]">
                 <div className="w-[100%] items-center flex flex-col">
@@ -325,7 +340,7 @@ const Body = () => {
       {/*portfolio*/}
       <div className="backPortFolio h-[300px] flex w-full relative items-center justify-center">
         <div className="border-[8px] border-[#000]  py-[5px] px-[15px] text-center text-black text-3xl font-bold font-['Montserrat'] leading-10 tracking-widest">
-          PORTFOLIO
+          {text("portfolio", 0)}
         </div>
       </div>
       {/*carousel*/}
@@ -366,16 +381,15 @@ const Body = () => {
         ))}
       </Slider>
       <div className="w-full bg-[#1A1A1A] py-[10px]">
-        <p className="text-center text-neutral-50 text-xl font-semibold font-['Montserrat']">And many more to come!</p>
+        <p className="text-center text-neutral-50 text-xl font-semibold font-['Montserrat']"> {text("portfolio", 1)}</p>
       </div>
       {/*contact*/}
       <div className="contact backAboutMe min-h-[600px] flex flex-col items-center w-full relative pt-[140px]">
         <div className="border-[8px] mb-[60px] border-[#000] py-[5px] px-[15px] text-center text-black text-3xl font-bold font-['Montserrat'] leading-10 tracking-widest">
-          CONTACT
+          {text("contact", 0)}
         </div>
         <p className="max-w-[700px] text-center text-zinc-950 text-base font-normal font-['Open Sans'] leading-tight mb-[85px]">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem
-          sed viverra. In vel urna quis libero viverra facilisis ut ac est.
+          {text("contact", 1)}
         </p>
         <div className="mb-[120px]">
           <LogoLine />

@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "ru": ["Портфолио", "Обо мне", "Навыки", "КОНТАКТЫ"],
+    "eng": ["Portfolio", "About me", "Skills", "CONTACT ME"]
+  },
+  "mainInfo": {
+    "ru": ["Привет, меня зовут", "Токарев Антон", "Front-end Разработчик / хороший человек"],
+    "eng": ["Hi, my name is", "Tokarev Anton", "Front-end Developed / a good man"]
+  },
+  "additionally": {
+    "ru": ["Моя история", "Тут история", "Подробнее"],
+    "eng": ["My story", "this story", "Read more"]
+  },
+  "aboutMe": {
+    "ru": ["ОБО МНЕ", "Тут обо мне", "РАЗРАБОТКА", "Я использую бла бла", "НАВЫКИ", "ИСПОЛЬЗУЮ", "ИЗУЧАЮ", "ИНТЕГРИРОВАННАЯ СРЕДА РАЗРАБОТКИ", "ПРОЧИЕ НАВЫКИ"],
+    "eng": ["ABOUT ME", "This about me", "DEVELOPMENT", "I can design the site based on your needs and suggestions. I can also design the site from scratch and consult you during the job.", "SKILLS", "USING NOW", "LEARNING", "IDE", "OTHER SKILLS"]
+  },
+  "portfolio": {
+    "ru": ["ПОРТФОЛИО", "И многое другое еще впереди!"],
+    "eng": ["PORTFOLIO", "And many more to come!"]
+  },
+  "contact": {
+    "ru": ["КОНАКТ", "Инфа"],
+    "eng": ["CONTACT", "INFO"]
+  },
+  "footer": {
+    "ru": ["НАВЕРХ", "@2023 Токарев Антон"],
+    "eng": ["BACK TO TOP", "@2023 Tokarev Anton"]
+  },
+  "adaptiveMain": {
+    "ru": ["меня зовут Антон", "Я РАЗРАБОТЧИК"],
+    "eng": ["my name is Anton", "IM A DEVELOPER"]
+  }
+}
+

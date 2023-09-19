@@ -53,6 +53,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.waterBot {
+  background-image: url("/src/assets/images/waterBot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bank {
   background-image: url("/src/assets/images/bankImg.png");
   background-repeat: no-repeat;
@@ -102,6 +108,12 @@ body {
   background-position: top;
 }
 
+.backgroundMainAdaptive {
+  background-image: url("/src/assets/images/BackgroundMainAdaptive.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .slick-slider {
   background: #e5e7eb;
   margin: 0;
@@ -123,6 +135,20 @@ body {
   box-shadow: unset;
 }
 
+.animate-scale-up {
+  transform: scale(1);
+  animation-name: scale-up;
+  animation-duration: .3s;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 @media (max-width: 1125px) {
   .backCustomMain {

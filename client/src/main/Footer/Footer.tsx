@@ -1,7 +1,18 @@
 import React from "react";
 import { LogoGoToTop } from "../../assets/logos";
+import baseLang from "../../assets/language.json";
+import { getStorage } from "../hooks/useLocal";
+interface BaseLang {
+  [key: string]: any;
+}
+
+const baseLangTyped: BaseLang = baseLang;
 
 const Footer = () => {
+  const lang = getStorage().lang;
+  const text = (num: number) => {
+    return baseLangTyped.footer[lang][num];
+  };
   const handleScroll = () => {
     const element = document.querySelector(".h-screen");
     if (element) {
@@ -17,12 +28,10 @@ const Footer = () => {
             <LogoGoToTop />
           </div>
           <p className="text-center text-white text-base font-bold font-['Montserrat'] tracking-widest mb-[100px]">
-            BACK TO TOP
+            {text(0)}
           </p>
         </div>
-        <div className="text-white text-lg font-normal font-['Montserrat']">
-          @2020 Tomasz Gajda All Rights Reserved.
-        </div>
+        <div className="text-white text-lg font-normal font-['Montserrat']">{text(1)}</div>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 
+const startBot = require("../allProjects/WaterBot/bot");
 const app = express();
 
 const blanchPath = path.resolve(__dirname, "../allProjects/Blanchard");
@@ -20,5 +21,6 @@ app.get("/*", function (req, res) {
 });
 
 app.listen(3000, "127.0.0.1", () => {
+  startBot();
   console.log("start");
 });

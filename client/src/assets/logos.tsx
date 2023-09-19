@@ -21,7 +21,7 @@ export const LogoBurgerFun = () => {
   );
 };
 
-export const LogoTelegram = () => (
+export const LogoTelegram = ({ color = "black" }: { color?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -31,21 +31,21 @@ export const LogoTelegram = () => (
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M21.997 12C21.997 17.5228 17.5198 22 11.997 22C6.47415 22 1.99699 17.5228 1.99699 12C1.99699 6.47715 6.47415 2 11.997 2C17.5198 2 21.997 6.47715 21.997 12ZM12.3553 9.38244C11.3827 9.787 9.43876 10.6243 6.52356 11.8944C6.05018 12.0827 5.8022 12.2669 5.77962 12.4469C5.74147 12.7513 6.12258 12.8711 6.64155 13.0343C6.71214 13.0565 6.78528 13.0795 6.86026 13.1038C7.37085 13.2698 8.05767 13.464 8.41472 13.4717C8.7386 13.4787 9.10009 13.3452 9.49918 13.0711C12.2229 11.2325 13.629 10.3032 13.7172 10.2831C13.7795 10.269 13.8658 10.2512 13.9243 10.3032C13.9828 10.3552 13.977 10.4536 13.9708 10.48C13.9331 10.641 12.4371 12.0318 11.6629 12.7515C11.4216 12.9759 11.2504 13.135 11.2154 13.1714C11.137 13.2528 11.0571 13.3298 10.9803 13.4038C10.506 13.8611 10.1502 14.204 11 14.764C11.4083 15.0331 11.7351 15.2556 12.0611 15.4776C12.4171 15.7201 12.7722 15.9619 13.2317 16.2631C13.3487 16.3398 13.4605 16.4195 13.5694 16.4971C13.9837 16.7925 14.3559 17.0579 14.8158 17.0155C15.083 16.991 15.359 16.7397 15.4992 15.9903C15.8305 14.2193 16.4817 10.382 16.6322 8.80081C16.6454 8.66228 16.6288 8.48498 16.6154 8.40715C16.6021 8.32932 16.5743 8.21842 16.4731 8.13633C16.3533 8.03911 16.1683 8.01861 16.0856 8.02C15.7095 8.0267 15.1324 8.22735 12.3553 9.38244Z"
-        stroke="#000000"
+        stroke={color}
         stroke-linejoin="round"
       ></path>{" "}
     </g>
   </svg>
 );
 
-export const LogoGitHub = () => (
+export const LogoGitHub = ({ width = "50px", color = "black" }: { width?: string; color?: string }) => (
   <svg
-    className="max-w-[50px]"
+    className={`max-w-[${width}]`}
     viewBox="0 0 48 48"
     id="Layer_2"
     data-name="Layer 2"
     xmlns="http://www.w3.org/2000/svg"
-    fill="#000000"
+    fill={color}
   >
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -58,8 +58,8 @@ export const LogoGitHub = () => (
   </svg>
 );
 
-export const LogoCodeWars = () => (
-  <svg className="max-w-[50px]" fill="#000000" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+export const LogoCodeWars = ({ width = "50px", color = "black" }: { width?: string; color?: string }) => (
+  <svg className={`max-w-[${width}]`} fill={color} viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
@@ -107,7 +107,7 @@ export const backgroundLogoIT = () => (
   </svg>
 );
 
-export const LogoLine = () => (
+export const LogoLine = ({ color = "black" }: { color?: string }) => (
   <svg
     className="max-w-[200px]"
     width="227"
@@ -119,31 +119,31 @@ export const LogoLine = () => (
     <g clip-path="url(#clip0_599_12)">
       <path
         d="M76.6667 1.33336C75.3334 3.60003 88.1334 16.4 89.8667 14.6667C90.8 13.7334 89.0667 11.0667 84.4 6.53336C79.8667 1.8667 77.3334 0.266696 76.6667 1.33336Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M90 1.33336C88.6667 3.60003 101.467 16.4 103.2 14.6667C104.133 13.7334 102.4 11.0667 97.7333 6.53336C93.2 1.8667 90.6667 0.266696 90 1.33336Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M103.333 1.33333C102.8 2.26667 104.933 5.46667 108.8 9.46667L115.333 16L121.867 9.33333C126.4 4.8 128.133 2.26667 127.2 1.33333C126.267 0.399999 124.133 1.73333 120.667 5.33333L115.467 10.6667L109.867 5.2C106.133 1.46667 104 0.266666 103.333 1.33333Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M132.667 6.66666C128.267 11.0667 126.533 13.7333 127.467 14.6667C128.4 15.6 130.933 13.7333 135.333 9.33333C139.733 4.93333 141.467 2.26666 140.533 1.33333C139.6 0.399995 137.067 2.26666 132.667 6.66666Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M146 6.6667C137.067 15.7334 139.6 17.8667 149.067 9.4667C154.667 4.2667 155.733 2.80004 154.267 1.60004C152.933 0.400037 151.067 1.60004 146 6.6667Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M0 9.33329C0 10.1333 11.6 10.6666 32 10.6666C52.4 10.6666 64 10.1333 64 9.33329C64 8.53329 52.4 7.99996 32 7.99996C11.6 7.99996 0 8.53329 0 9.33329Z"
-        fill="black"
+        fill={color}
       />
       <path
         d="M162.667 9.33329C162.667 10.1333 174.267 10.6666 194.667 10.6666C215.067 10.6666 226.667 10.1333 226.667 9.33329C226.667 8.53329 215.067 7.99996 194.667 7.99996C174.267 7.99996 162.667 8.53329 162.667 9.33329Z"
-        fill="black"
+        fill={color}
       />
     </g>
     <defs>
