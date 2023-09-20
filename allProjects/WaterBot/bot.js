@@ -1,6 +1,7 @@
 const { Telegraf, Markup } = require("telegraf");
 const TOKEN = "6290552808:AAHIduCawXKgTjqahlkfYJ-CPzFwQFfJb0o";
-
+const fs = require("fs");
+const users = require("./users.json");
 const bot = new Telegraf(TOKEN);
 
 const startBot = () => {
@@ -9,6 +10,17 @@ const startBot = () => {
   const data = require("./date.json");
 
   function saveUsers() {
+    fs.writeFile(
+      "../allProjects/WaterBot/users.json",
+      JSON.stringify({ ...users }),
+      "utf8",
+      (err) => {
+        if (err) {
+          console.error("Ошибка при записи файла:", err);
+        }
+      },
+    );
+
     users = { ...users };
   }
 
@@ -59,9 +71,13 @@ const startBot = () => {
 
     if (!users[userId]) {
       users[userId] = {
-        awadEmojiAll: [],
+        awadEmojiAll: ["💚"],
         timeDrink: 0,
-        oftenTime: ["Закрыть"],
+        oftenTime: ["Закрыть", "1"],
+        timeToNeed: "0",
+        drink: "false",
+        time: 0,
+        timeEmoji: 0,
       };
 
       saveUsers();
@@ -113,7 +129,10 @@ const startBot = () => {
       users[userId].oftenTime,
     );
 
-    ctx.reply("Ставь время!", offtenTimeKeyboard);
+    ctx.reply(
+      "Ставь время! Напиши число это будет равно сколько минут!",
+      offtenTimeKeyboard,
+    );
 
     bot.on("message", (ctx) => {
       const userId = ctx.message.from.id;
