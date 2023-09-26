@@ -23,11 +23,19 @@ const Header = () => {
       }
     >
       <div className="flex items-center justify-between min-w-[100px]">
-        <button onClick={() => setStorage("ru")} disabled={lang === "ru"} className="text-white disabled:opacity-50">
+        <button
+          onClick={() => setStorage("ru")}
+          disabled={lang === "ru"}
+          className="text-white opacity-50 disabled:opacity-100 hover:opacity-100 transition duration-300"
+        >
           RU
         </button>
         <div className="text-white">/</div>
-        <button onClick={() => setStorage("eng")} disabled={lang === "eng"} className="text-white disabled:opacity-50">
+        <button
+          onClick={() => setStorage("eng")}
+          disabled={lang === "eng"}
+          className="text-white opacity-50 disabled:opacity-100 hover:opacity-100 transition duration-300"
+        >
           ENG
         </button>
       </div>

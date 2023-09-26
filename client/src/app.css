@@ -150,9 +150,11 @@ body {
   }
 }
 
+
 @media (max-width: 1125px) {
   .backCustomMain {
     background-image: linear-gradient(100deg, #D7D7D7 60%, #000000 20%);
   }
 }
+
 
