@@ -16,7 +16,6 @@ app.get("/blanchard", function (req, res) {
   const indexPath = path.resolve(blanchPath, "index.html");
   res.sendFile(indexPath);
 });
-
 app.get("/prototest", function (req, res) {
   const indexPath = path.resolve(prototest, "index.html");
   res.sendFile(indexPath);
