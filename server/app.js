@@ -5,9 +5,9 @@ const startBot = require("../allProjects/WaterBot/bot");
 const app = express();
 
 const blanchPath = path.resolve(__dirname, "../allProjects/Blanchard");
-const prototest = path.resolve(__dirname, "../allProjects/prototypeTest");
+const prototest = path.resolve(__dirname, "../allProjects/prototest");
 const mainLandPath = path.resolve(__dirname, "../client/dist");
-const checkPath = path.resolve(__dirname, "../allProjects/check/dist/dist");
+const checkPath = path.resolve(__dirname, "../allProjects/check");
 
 app.use(express.static(mainLandPath));
 app.use(express.static(blanchPath));
