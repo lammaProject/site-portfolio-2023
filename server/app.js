@@ -6,28 +6,30 @@ const app = express();
 
 const blanchPath = path.resolve(__dirname, "../allProjects/Blanchard");
 const prototest = path.resolve(__dirname, "../allProjects/prototest");
+const sobrPath = path.resolve(__dirname, "../allProjects/sobr");
 const mainLandPath = path.resolve(__dirname, "../client/dist");
-const checkPath = path.resolve(__dirname, "../allProjects/check");
 
-app.use(express.static(mainLandPath));
-app.use(express.static(blanchPath));
-app.use(express.static(prototest));
-app.use(express.static(checkPath));
+app.use(express.static(sobrPath));
+// app.use(express.static(mainLandPath));
+// app.use(express.static(blanchPath));
+// app.use(express.static(prototest));
+
+app.get("/sobr", function (req, res) {
+  const indexPath = path.resolve(sobrPath, "index.html");
+  res.sendFile(indexPath);
+});
 
 app.get("/blanchard", function (req, res) {
   const indexPath = path.resolve(blanchPath, "index.html");
   res.sendFile(indexPath);
 });
+
 app.get("/prototest", function (req, res) {
   const indexPath = path.resolve(prototest, "index.html");
   res.sendFile(indexPath);
 });
-app.get("/sobrcheck", function (req, res) {
-  const indexPath = path.resolve(checkPath, "index.html");
-  res.sendFile(indexPath);
-});
 app.get("/*", function (req, res) {
-  const indexPath = path.resolve(mainLandPath, "index.html");
+  const indexPath = path.resolve(sobrPath, "index.html");
   res.sendFile(indexPath);
 });
 
